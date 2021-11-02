@@ -1,0 +1,2483 @@
+@charset "utf-8";
+/* border-top:dotted */
+.sample {position:relative;}
+
+.sub_con1{width:1260px;overflow:hidden;margin:0 auto;}
+.sub_con2{width:1260px;overflow:hidden;margin:0 auto; }
+.sub_con3{width:1260px;overflow:hidden;margin:0 auto;}
+.sub_con4{width:490px;height:450px;margin:0 auto;}
+.sub_con5{width:980px;overflow:hidden;margin:0 auto;}
+
+
+/* login */
+#bg_white{
+	background-color:#fff;
+}
+.login_bg{
+	margin:60px;
+	width:370px;
+	height:327px;
+}
+.login_bg > ul{
+	text-align:center;
+	margin-left:0px;
+	margin-top:0px;
+}
+.login_bg ul li.login_font{
+	font-size:40px;
+	color:#333;
+	margin-bottom:5px;
+	font-weight:bold;
+}
+.login_bg ul li.text01{
+	font-size:14px;
+	color:#ddd;
+}
+.login_check{
+	clear:both;
+	margin-bottom:10px;
+}
+.login_check ul{
+	margin-left:130px;
+	line-height:0px;
+	height:100%;
+	width:100px;
+}
+.login_check ul li{
+	width:100%;
+	line-height:0px;
+	position:relative;
+}
+.login_check ul li input{
+	background-color:#fff;
+	border:1px solid #3ddcc7;
+	width:100px;
+	height:30px;
+	margin:0 auto;
+	overflow:hidden;
+	line-height:0px;
+}
+.id_left{
+	float:left;
+	overflow:hidden;
+	width:48%;
+	margin-right:10px;
+}
+.id_left02{
+	float:left;
+	overflow:hidden;
+	width:48%;
+}
+.id_left dl dd{
+	margin-left:0px;
+	margin-top:5px;
+}
+.id_left dl dd input{ 
+	width:170px;
+	height:35px;
+	border:1px solid #ddd;
+}
+.id_left02 dl dd{
+	margin-left:0px;
+}
+.id_left02 dl dd input{
+	width:170px;
+	margin-left:0px;
+	margin-top:5px;
+	height:35px;
+	border:1px solid #ddd;
+}
+.search_login{
+	margin-top:30px;
+	overflow:hidden;
+}
+
+/* Join */
+.reserve_form_join{
+	width:960px;
+	border:1px solid blue;
+	height:100%;
+	margin:0 auto;
+	margin-top:60px;
+	border:1px solid #bbb;
+	background-color:#fff;
+}
+
+.join_m {
+	height:100%;
+}
+.join_m div.join_l ul li span{
+	color:#d92a1d;
+}
+.join_m div.join_r ul li span{
+	color:#d92a1d;
+}
+.join_m{
+	margin:20px;
+	width:920px;
+	height:100%;
+}
+.join_m h1{
+	font-size:30px;
+	text-align:left;
+}
+.join_l{
+	width:49%;
+	height:500px;
+	float:left;
+	margin-right:14px;
+}
+.join_l ul{
+	text-align:left;
+	color:#000;
+	font-size:14px;
+	font-weight:bold;
+	margin-bottom:20px;
+}
+.join_l ul li{
+	margin-bottom:5px;
+}
+.join_l ul li input{
+	width:400px;
+	height:45px;
+	border:1px solid #888;
+}
+.join_l ul.join_name{
+	float:left;
+	margin-right:36px;
+}
+.join_l ul.join_name li input{
+	width:180px;
+	height:45px;
+	border:1px solid #888;
+}
+.join_l ul.join_birth{
+	clear:both;
+	overflow:hidden;
+}
+.join_l ul.join_birth li input{
+	float:left;
+	margin-right:10px;
+	width:125px;
+	height:45px;
+	border:1px solid #888;
+}
+.join_mw{
+	clear:both;
+}
+.join_mw{
+	clear:both;
+}
+.join_l ul li select {
+	width:402px;
+	height:45px;
+	border:1px solid #888;
+}
+
+.join_r{
+	width:49%;
+	overflow:hidden;
+	height:100%;
+}
+.join_r ul{
+	text-align:left;
+	color:#000;
+	font-size:14px;
+	font-weight:bold;
+	margin-bottom:20px;
+	margin-left:35px;
+}
+.join_r ul li{
+	margin-bottom:5px;
+}
+.join_r ul li input{
+	width:400px;
+	height:45px;
+	border:1px solid #888;
+	clear:both;
+	margin-left:0px;
+}
+
+.join_r ul.join_loca li input{
+	height:45px;
+	width:118px;
+	margin-right:10px;
+}  
+
+.join_r ul.join_loca li input.lo_button{
+	height:45px;
+	width:118px;
+	margin-right:10px;
+	background-color:#fff;
+	border:2px solid #3ddcc7;
+	font-weight:bold;
+	float:right;
+}  
+.join_r ul.join_loca li.input_wh input{
+	width:400px;
+	height:45px;
+	border:1px solid #888;
+}
+
+.join_r ul.join_id {
+	clear:both;
+}  
+.join_r ul.agree li input{
+	height:12px;
+	width:12px;
+	margin-right:10px;
+	overflow:hidden;
+}
+.join_r ul.agree li.ag_button input{
+	height:45px;
+	width:118px;
+	margin-right:10px;
+	border:2px solid #3ddcc7;
+	background-color:#fff;
+	font-weight:bold;
+	color:#333;
+	font-weight:bold;
+}
+/* reserve01 */
+
+.sub_con1 p button.button02{
+	border:3px solid #ddd;
+	background:#fff;
+	width:120px;
+	margin-top:12px;
+	height:50px;
+	margin-left:-150px;
+	color:#3ddcc7;
+	font-size:16px;
+	font-weight:bold;
+}
+
+/* reserve trip */
+.reserve_form{
+	width:960px;
+	margin:0 auto;
+	height:100%;
+	overflow:hidden;
+} 
+.reserve_form > ul li{
+	font-size:22px;
+	color:#3ddcc7;
+	margin-top:20px;
+} 
+.reserve_form > ul li.m_t{
+	margin-top:5px;
+	font-size:14px;
+	color:#333;
+	font-weight:bold;
+} 
+
+/* reserve trip 0 */
+
+.reserve_form0{
+	width:713px;
+	height:100%;
+	float:left;
+}
+/* reserve - trip 1p */
+.reserve_form01{
+	width:960px;
+	min-height:400px;
+	margin:0 auto;
+	margin-top:60px;
+	border:1px solid #bbb;
+	background-color:#fff;
+	/* -webkit-box-shadow: 0 0 5px 1px #6B6B6B;
+	-moz-box-shadow: 0 0 5px 1px #6B6B6B;
+	box-shadow: 0 0 5px 1px #6B6B6B; */
+}
+.back_mint{
+	width:100%;
+	height:50px;
+	background-color:#3ddcc7;
+}
+.back_mint span{
+	font-size:22px;
+	color:white;
+	line-height:50px;
+}
+.trip{
+	margin-left:30px;
+	text-align:left;
+}
+.trip ul li{
+	float:left;
+}
+.input_trip{
+	clear:both;
+	float:left;
+	margin-left:30px;
+}
+.input_trip ul{
+	width:900px;
+	overflow:hidden;
+	position:relative;
+	border:1px solid #ddd;
+	background-color:#fff;
+}
+.input_trip ul li{
+	width:299px;
+	height:50px;
+	float:left;
+	border-right:1px solid #ddd;
+}
+.input_trip ul li.cl_r{
+	border-right:1px solid #fff;
+}
+.fillholder{
+	margin-top:10px;
+	margin-left:0px;
+	width:100%;
+}
+.fillholder label{
+	position:absolute;
+	top:18px;
+}
+.fillholder input {
+	border:#fff;
+	height:30px;
+	width:230px;
+}
+.fillholder select {
+	border:#fff;
+	height:30px;
+	width:230px;
+}
+.fillholder button {
+	background-color:#3ddcc7;
+	border:1px solid #0b9f8c;
+	color:#fff;
+}
+	
+/* reserve - age */
+.input_age{
+	margin-left:30px;
+	text-align:left;
+	clear:both;
+	width:900px;
+	border-top:1px dot #eee;
+}
+.input_age ul{
+	overflow:hidden;
+	position:relative;
+}
+
+.input_age ul li{
+	width:298px;
+	float:left;
+}
+.input_age ul li.cl_r{
+	border-right:1px solid #fff;
+}
+.input_age ul li dl{
+	width:297px;
+}
+.input_age ul li dl dt{
+	font-size:16px;
+	margin-bottom:5px;
+	margin-left:70px;
+	color:#333;
+	font-weight:bold;
+}
+.input_age ul li dl dd{
+	margin-left:70px;
+}
+.input_age ul li dl dd button{
+	border:1px solid #aaa;
+	color:#999;
+	background:#eee;
+	width:50px;
+	height:50px;
+}
+.input_age ul li dl dd input{
+	border:1px solid #aaa;
+	color:#999;
+	width:50px;
+	height:49px;
+	text-align:center;
+}
+
+.reserve_form01 p button.button_01{
+	background-color:#3ddcc7;
+	border:1px solid #0b9f8c;
+	width:130px;
+	height:40px;
+	color:#fff;
+	font-size:16px;
+	font-weight:bold;
+/* 	-webkit-box-shadow: 0 0 5px 1px #6B6B6B;
+	-moz-box-shadow: 0 0 5px 1px #6B6B6B;
+	box-shadow: 0 0 5px 1px #6B6B6B;	 */
+	
+}
+
+/* reserve02 */
+
+/* reserve - trip 2p */
+
+.reserve_form02{
+	width:450px;
+	float:left;
+	margin-left:30px;
+	min-height:500px;
+	border:1px solid #bbb;
+	background-color:#fff;
+
+}
+.info_bg{
+	margin-top:5px;
+	width:100%;
+	height:30px;
+	background-color:#ddd;
+}
+.info_bg p{
+	float:left;
+	width:32%;
+	line-height:6px;
+}
+
+.info_sc{
+	width:100%;
+	height:100%;
+	overflow-x:hidden;
+	overflow-y:scroll;
+	height:400px;
+	border-bottom:1px solid #ddd;
+}
+
+.info_sc dl{
+	width:100%;
+	height:40px;
+	border-bottom:1px solid #ddd;
+}
+.info_sc dl dt{
+	float:left;
+	width:140px;
+	margin-left:10px;
+	
+}
+.info_sc dl dt p{
+	margin-top:-1px;
+}
+.info_sc dl dd{
+	line-height:30px;
+	width:32%;
+	float:left;
+	position:relative;
+	margin:0 auto;
+	overflow:hidden;
+}
+.info_sc dl dd input{
+	border:1px solid red;
+}
+.reserve_form02 ul.info_txt {
+	text-align:left;
+	padding:15px;
+}
+.reserve_form02 ul.info_txt li {
+	line-height:20px;
+}
+.reserve_form02 ul.info_txt li span{
+	font-size:13px;
+	font-weight:bold;
+}
+.reserve_form02 ul.info_txt li span.info_txt_small{
+	font-size:0.9em;
+}
+
+/* reserve - trip 3p */
+.reserve_form03{
+	width:450px;
+	float:left;
+	margin-left:20px;
+	min-height:400px;
+	border:1px solid #bbb;
+	background-color:#fff;
+}
+.reserve_form03 ul.info_txt li {
+	line-height:20px;
+}
+.reserve_form03 ul.info_txt li span{
+	font-size:13px;
+	font-weight:bold;
+}
+.reserve_form03 ul.info_txt li span.info_txt_small{
+	font-size:0.9em;
+}
+/* reserve - trip 4p */
+
+.reserve_form04{
+	width:220px;
+	float:left;
+	margin-left:20px;
+	min-height:704px;
+	border:3px solid #3ddcc7;
+	background-color:#e5f1ef;
+}
+.reserve_form04 ul{
+	margin-left:10px;
+	margin-right:10px;
+	widht:100%;
+	height:100%;
+	text-align:left;
+}
+.reserve_form04 ul h2{
+	font-size:14px;
+	font-weight:bold;
+	color:#333;
+}
+.reserve_form04 ul dl dt{
+	color:#333;
+	float:left;
+	line-height:22px;
+	
+}
+.reserve_form04 ul dl dd{
+	color:#888;
+	text-align:right;
+	line-height:22px;
+}
+.reserve_form04 ul p{
+	color:#333;
+	text-align:right;
+	line-height:22px;
+	font-size:22px;
+}
+.reserve_form04 ul dl dd.strong_pay{
+	color:#333;
+	font-weight:bold;
+	font-size:16px;
+}
+.reserve_form04 p button.button03{
+	color:#fff;
+	font-weight:bold;
+	font-size:16px;
+	background-color:#3ddcc7;
+	border:1px solid #0b9f8c
+}
+
+.info_txt {
+	text-align:left;
+	padding:15px;
+}
+.info_txt li {
+	
+}
+.info_txt li span{
+	font-weight:bold;
+	font-size:13px;
+}
+
+/* 유의사항 */
+.info_txt02 {
+	width:1200px;
+	margin:0 auto;
+	text-align:left;
+}
+.info_txt02 ul h4{
+	font-size:20px;
+	font-weight:bold;
+	height:45px;
+	width:1168px;
+	border-bottom:1px dotted #aaa;
+}
+
+.info_txt02 ul li{
+	line-height:20px;
+}
+/* reserve - trip 5p */
+.reserve_form05{
+	width:711px;
+	min-height:380px;
+	margin:0 auto;
+	overflow:hidden;
+	border:1px solid #bbb;
+	background-color:#fff;
+	float:left;
+	margin-bottom:15px;
+}
+
+.reserve_form05 div.info_user{
+	float:left;
+	widht:90px;
+	min-height:370px;
+	margin-right:20px;
+}
+.reserve_form05 div.info_user ul{
+	width:90px;
+	height:35px;
+	background-color:#f0f5f9;
+}
+.reserve_form05 div.info_user ul li{
+	line-height:33px;
+	color:#222;
+	font-size:16px;	
+}
+
+.info_enter01 dl dt {
+	float:left;
+	line-height:40px;
+	font-size:16px;
+	font-weight:bold;
+	
+}
+.info_enter01 dl dd select{
+	width:470px;
+	height:40px;
+	border:1px solid #cccccc;
+	color:#888888;
+} 
+.info_enter02 dl  {
+	float:left;
+	margin-right:30px;
+}
+.info_enter02 dl dt {
+	text-align:left;
+	line-height:30px;
+	font-size:16px;
+	font-weight:bold;
+}
+.info_enter02 dl dd input{
+	width:184px;
+	height:40px;
+	border:1px solid #cccccc;
+	color:#888888;
+	margin-left:-40px;
+} 
+
+.info_enter03 dl  {
+	float:left;
+	margin-right:30px;
+}
+.info_enter03 dl dt {
+	text-align:left;
+	line-height:30px;
+	font-size:16px;
+	font-weight:bold;
+}
+.info_enter03 dl dd input{
+	width:300px;
+	height:40px;
+	border:1px solid #999999;
+	color:#888888;
+	margin-left:-40px;
+} 
+
+.info_enter04 dl  {
+	float:left;
+	margin-right:30px;
+}
+.info_enter04 dl dt {
+	text-align:left;
+	line-height:30px;
+	font-size:16px;
+	font-weight:bold;
+}
+.info_enter04 dl dd select{
+	width:571px;
+	height:40px;
+	border:1px solid #cccccc;
+	color:#888888;
+	margin-left:-40px;
+	margin-bottom:5px; /* 처음으로 마진 탑 안먹혀있었음  */
+} 
+
+.sale_info {
+	width:580px;
+	float:right;
+	text-align:left;
+	padding-right:20px;
+}
+
+
+/* reserve - trip 5p */
+.reserve_form05{
+	width:711px;
+	min-height:100px;
+	margin:0 auto;
+	overflow:hidden;
+	border:1px solid #bbb;
+	background-color:#fff;
+	float:left;
+	margin-bottom:15px;
+}
+
+.reserve_form05 div.info_user{
+	float:left;
+	widht:90px;
+	min-height:100px;
+	margin-right:20px;
+}
+.reserve_form05 div.info_fr{
+	float:right;
+}
+
+
+
+
+/* reserve - trip 6p */
+
+.reserve_form06{
+	width:220px;
+	float:right;
+	margin-left:20px;
+	min-height:820px;
+	border:3px solid #3ddcc7;
+	background-color:#e5f1ef;
+}
+.reserve_form06 ul{
+	margin-left:10px;
+	margin-right:10px;
+	widht:100%;
+	height:100%;
+	text-align:left;
+}
+.reserve_form06 ul h2{
+	font-size:14px;
+	font-weight:bold;
+	color:#333;
+}
+.reserve_form06 ul dl dt{
+	color:#333;
+	float:left;
+	line-height:22px;
+	
+}
+.reserve_form06 ul dl dd{
+	color:#888;
+	text-align:right;
+	line-height:22px;
+}
+.reserve_form06 ul p{
+	color:#333;
+	text-align:right;
+	line-height:22px;
+	font-size:22px;
+}
+.reserve_form06 ul dl dd.strong_pay{
+	color:#333;
+	font-weight:bold;
+	font-size:16px;
+}
+.reserve_form06 ul p{
+	color:#333;
+	text-align:right;
+	line-height:22px;
+	font-size:22px;
+}
+
+.reserve_form06 p button.button03{
+	color:#fff;
+	font-weight:bold;
+	font-size:16px;
+	background-color:#3ddcc7;
+	border:1px solid #0b9f8c
+}
+
+/* reserve - trip 7p */
+.reserve_form07{
+	width:711px;
+	min-height:280px;
+	border:1px solid blue;
+	margin:0 auto;
+	overflow:hidden;
+	border:1px solid #bbb;
+	background-color:#fff;
+	float:left;
+	margin-bottom:30px;
+}
+.reserve_form07 ul{
+	margin:20px;
+	text-align:left;
+	line-height:20px;
+	color:#333;
+}
+
+
+/* reserve 4 - trip 8p */
+.reserve_form08{
+	width:711px;
+	height:100px;
+	overflow:hidden;
+	border:1px solid #bbb;
+	background-color:#fff;
+}
+.reserve_form08 ul{
+	margin:20px;
+	color:#555;
+	font-weight:bold;
+	overflow:hidden;
+}
+.reserve_form08 ul li{
+	margin-bottom:10px;
+}
+
+/* reserve 4 - trip 9p */
+
+.reserve_form09{
+	width:711px;
+	min-height:150px;
+	overflow:hidden;
+	border:1px solid #bbb;
+	background-color:#fff;
+}
+.reserve_form09 dl{
+	float:left;
+	text-align:left;	
+	margin-left:20px;
+}
+
+.reserve_form09 dl dt {
+	text-align:left;
+	line-height:30px;
+	font-size:16px;
+	font-weight:bold;
+}
+
+.reserve_form09 dl dd select{
+	width:300px;
+	height:40px;
+	border:1px solid #999999;
+	color:#888888;
+	margin-left:-40px;
+}
+.reserve_form09 ul {
+	clear:both;
+	text-align:left;
+	margin:20px;
+}
+.reserve_form09 ul li{
+	line-height:18px;
+}
+.reserve_form09 ul li.pay_info_t{
+	margin-bottom:10px;
+	color:#666;
+	font-weight:bold;
+	font-size:13px;
+}
+ul.danger_info {
+	text-align:left;
+}
+ul.danger_info h4{
+	color:#333;
+	font-size:20px;
+	font-weight:bold;
+	height:40px;
+	border-bottom:1px dotted #888;
+}
+
+/* reserve 5 */
+
+.reserve_form10{
+	width:958px;
+	height:100%;
+	overflow:hidden;
+	border:1px solid #bbb;
+	background-color:#fff;
+}
+.reserve_form10 table{
+	margin:15px 15px 15px 15px;
+}
+.reserve_form10 table thead th{
+	margin:15px 15px 15px 15px;
+	height:40px;
+	background-color:#3ddcc7;
+	font-size:14px;
+	color:#fff;
+}
+.reserve_form10 table tr {
+	border-bottom:1px solid #ddd;
+}
+.reserve_form10 table tr td{
+	height:30px;
+}
+/* con - title */
+.con_title {
+	overflow:hidden;
+	border:1px solid #f8f8f8;
+	margin:0 auto;
+	width:980px;
+	padding-top:20px;
+}
+.con_title p{
+	color:#333;
+	font-size:22px;
+	height:15px;
+	text-align:left;	
+}
+
+
+/* reserveDate */
+.start_date select {
+	border:1px solid #ddd;
+	background-color:#fff;
+	widht:300px;
+	margin-bottom:20px;
+}
+.arrive_date select {
+	border:1px solid #ddd;
+	background-color:#fff;
+	widht:300px;
+}
+
+/* mypage identity */
+/* identity01 */
+.identity{
+	width:1100px;
+	margin:0 auto;
+	overflow:hidden;
+}
+.iden_title{
+	width:100%;
+	height:145px;
+}
+.iden_title ul li{
+	margin-top:60px;
+}
+.iden_title ul li.iden_a {
+	color:#333;
+	font-size:32px;
+	margin-right:20px;
+}
+.iden_title ul li.iden_b {
+	line-height:55px;
+	font-size:14px;
+	color:#555;
+}
+.iden_title ul li{
+	float:left;
+}
+.iden_menu{
+	background-color:#05917f;
+	margin-top:-10px;
+	overflow:hidden;
+	height:50px;
+	width:100%;
+	line-height:24px;
+	font-size:14px;
+}
+.iden_menu ul li{
+	float:left;
+	color:#fff;
+	margin-left:30px;
+}
+.iden_submenu{
+	width:100%;
+	height:50px;
+}
+.iden_submenu ul li{
+	float:left;
+	margin-left:30px;
+}
+.iden_info h2{
+	text-align:left;
+	font-size:20px;
+	font-weight:bold;
+	color:#222;
+}
+.iden_info table{
+	width:100%;
+	height:100%;
+	text-align:left;
+	margin-bottom:10px;
+}
+.iden_info table tr th{
+	width:20%;
+	height:100px;
+	border-bottom:1px solid #888;
+	font-size:16px;
+	font-weight:bold;
+	color:#333;
+}
+.iden_info table tr td{
+	width:30%;
+	height:100px;
+	border-bottom:1px solid #888;
+	font-size:16px;
+}
+div.iden_submenu ul li {
+	color: #333; 
+	text-decoration: none;
+	cursor:pointer;
+}
+/* identity02 */
+.info_con{
+	width:100%;
+	height:100%;
+}
+.info_con div.info_l{
+	float:left;
+	width:525px;
+	min-height:500px;
+	margin-right:20px;
+}
+
+.info_con div.info_l ul {
+	text-align:left;
+}
+.info_con div.info_l ul li{
+	color:#333;
+	font-weight:bold;
+	font-size:14px;
+}
+.info_con div.info_l ul li.m_t{
+	margin-top:30px;
+}
+.info_con div.info_r ul li.m_t{
+	margin-top:30px;
+}
+.info_con div.info_l ul li input{
+	width:450px;
+	height:45px;
+	border:1px solid #888;
+	margin-bottom:5px;
+	margin-top:5px;
+}
+.info_con div.info_l ul li select{
+	width:450px;
+	height:45px;
+	border:1px solid #888;
+	margin-bottom:5px;
+	margin-top:5px;
+}
+.info_con div.info_r{
+	float:left;
+	height:100%;
+	width:525px;
+	min-height:500px;
+}
+.info_con div.info_r ul li{
+	color:#333;
+	font-weight:bold;
+	font-size:14px;
+}
+.info_con div.info_r ul li input{
+	width:450px;
+	height:45px;
+	border:1px solid #888;
+	margin-bottom:5px;
+	margin-top:5px;
+}
+.info_con div.info_r ul li input[type=button].button01 {
+	width:100px;
+	background-color:#3ddcc7;
+	border:1px solid #0b9f8c;
+	color:#fff;
+}
+.info_con div.info_r ul li input[type=button].button02 {
+	width:100px;
+	border:1px solid #3ddcc7;
+	background-color:#fff;
+}
+.info_con div.info_r ul li select{
+	width:450px;
+	height:45px;
+	border:1px solid #888;
+	margin-bottom:5px;
+	margin-top:5px;
+}
+.info_con div.info_r ul {
+	text-align:left;
+}
+
+/* password modify */
+
+#bg_white{
+	background-color:#fff;
+}
+.pass_bg{
+	margin:60px;
+	width:370px;
+	height:327px;
+}
+
+.pass_bg > ul{
+	text-align:center;
+	margin-left:0px;
+	margin-top:0px;
+}
+.pass_bg ul li.pass_font{
+	font-size:40px;
+	color:#333;
+	margin-bottom:5px;
+	font-weight:bold;
+}
+.pass_bg ul li.text01{
+	font-size:14px;
+	color:#ddd;
+}
+.pass_bg ul li{
+	font-size:14px;
+	margin-bottom:7px;
+} 
+.pass_bg ul li input{
+	width:370px;
+	height:45px;
+} 
+
+.pass_check{
+	clear:both;
+	margin-bottom:10px;
+}
+.pass_check ul{
+	margin-left:130px;
+	line-height:0px;
+	height:100%;
+	width:100px;
+}
+.pass_check ul li{
+	width:100%;
+	line-height:0px;
+	position:relative;
+}
+.pass_check ul li input{
+	background-color:#fff;
+	border:1px solid #3ddcc7;
+	width:100px;
+	height:45px;
+	margin:0 auto;
+	overflow:hidden;
+	line-height:0px;
+}
+.search_pass{
+	margin-top:30px;
+	overflow:hidden;
+}
+
+
+/* identity02 = delete */
+.del{
+	width:1100px;
+	margin:0 auto;
+	overflow:hidden;
+}
+.del h2{
+	text-align:left;
+	font-size:20px;
+	color:#222;
+	margin-top:70px;
+}
+.del_info ul.del_line{
+	border-top:1px solid #888;
+	text-align:left;
+	
+}
+.del_info ul.del_line li{
+	margin-top:20px;
+	color:#333;
+	font-size:14px;
+}
+.del_button{
+	text-align:left;
+	margin-top:50px;
+}
+.del_button li{
+	margin-top:10px;
+}
+.del_button li input{
+	border:1px solid #888;
+	width:350px;
+	height:45px;
+	margin-right:20px;
+}
+.del_button li input[type=button]{
+	width:100px;
+	height:45px;
+	background-color:#3ddcc7;
+	color:#fff;
+}
+
+/* inquiry */
+.info_enter03 dl dd input[type=button].inquiryB {
+	background-color:#3ddcc7;
+	border:1px solid #0b9f8c;
+	width:100px;
+	height:40px;
+	margin-left:5px;
+	color:#fff;
+}
+
+#bg_white{
+	background-color:#fff;
+}
+.inquiry_bg{
+	margin:60px;
+	width:370px;
+	height:327px;
+}
+
+.inquiry_bg > ul{
+	text-align:center;
+	margin-left:0px;
+	margin-top:0px;
+}
+.inquiry_bg ul li.inquiry_font{
+	font-size:40px;
+	color:#333;
+	margin-bottom:5px;
+	font-weight:bold;
+}
+.inquiry_bg ul li.text01{
+	font-size:14px;
+	color:#ddd;
+}
+
+.inquiry_name div ul{
+	float:left;
+	margin-right:20px;
+}
+
+.inquiry_name div ul.mr_c{
+	margin-right:0px;
+	
+}
+
+.inquiry_name div ul li input{
+	width:160px;
+	margin-top:10px;
+	height:35px;
+	border:1px solid #ccc;
+}
+.inquiry_birth{
+	clear:both;
+}
+.inquiry_birth div ul li input{
+	width:105px;
+	margin-top:10px;
+	height:35px;
+	border:1px solid #ccc;
+}
+.inquiry_phone {
+	clear:both;
+}
+
+.inquiry_phone div ul li input{
+	width:345px;
+	margin-top:10px;
+	height:35px;
+	border:1px solid #ccc;
+}
+
+.inquiry_check{
+	clear:both;
+	margin-bottom:10px;
+}
+
+.inquiry_check ul{
+	margin-left:130px;
+	line-height:0px;
+	height:100%;
+	width:100px;
+}
+.inquiry_check ul li{
+	width:100%;
+	line-height:0px;
+	position:relative;
+}
+.inquiry_check ul li input{
+	background-color:#fff;
+	border:1px solid #3ddcc7;
+	width:100px;
+	height:45px;
+	margin:0 auto;
+	overflow:hidden;
+	line-height:0px;
+}
+
+/*   1104일 추가        */
+/* schedule01 */
+.schedule01_bg{
+	width:100%;
+	height:50px;
+	background-color:#3ddcc7;
+	text-align:left;
+}
+.schedule01_bg span.sc01{
+	font-size:20px;
+	color:#3ddcc7;
+	font-weight:bold;
+	margin-left:180px;
+	line-height:50px;
+}
+.schedule01_bg span.sc02{
+	font-size:20px;
+	color:#fff;
+	margin-left:370px;
+	line-height:50px;
+}
+
+.schedule01_bg span.sc03{
+	font-size:20px;
+	color:#fff;
+	margin-left:180px;
+	line-height:50px;
+}
+.schedule01_bg span.sc04{
+	font-size:20px;
+	color:#3ddcc7;
+	font-weight:bold;
+	margin-left:370px;
+	line-height:50px;
+}
+
+.sc_trip01{
+	text-align:left;
+	overflow:hidden;
+}
+.sc_trip01 ul{
+	margin-left:390px;
+}
+
+.sc_trip01 ul li{
+	color:#333;
+	font-size:16px;
+	font-weight:bold;
+	float:left;
+	margin-right:30px;
+	margin-top:30px;
+	margin-bottom:30px;
+}
+
+.sc_trip01 ul li input[type=button].t_bold{
+	color:#333;
+	background-image:url("../img/btn01.jpg");
+	width:39px;
+	height:39px;
+	border:1px solid #fff;
+}
+.sc_trip01 ul li input[type=button].t_weak{
+	color:#333;
+	background-image:url("../img/btn02.jpg");
+	width:39px;
+	height:39px;
+	border:1px solid #fff;
+}
+.reserve_form01 div.sc_button ul li button.button_02{
+	background-color:#3ddcc7;
+	border:1px solid #0b9f8c;
+	width:130px;
+	height:40px;
+	color:#fff;
+	font-size:16px;
+	font-weight:bold;
+	clear:both;
+	margin-top:30px;
+}
+
+/* del check */
+/* login */
+{
+	background-color:#fff;
+}
+#bg_white{
+	background-color:#fff;
+}
+.del_bg{
+	margin:60px;
+	width:370px;
+	height:327px;
+}
+.del_bg > ul{
+	text-align:center;
+	margin-left:0px;
+	margin-top:0px;
+}
+.del_bg ul li.del_font{
+	font-size:40px;
+	color:#333;
+	margin-bottom:5px;
+	font-weight:bold;
+}
+.del_bg ul li.text01{
+	font-size:14px;
+	color:#ddd;
+}
+
+
+/* 1107 게시판 추가 */
+
+.board_form{
+	width:960px;
+	margin:0 auto;
+	height:100%;
+	overflow:hidden;
+} 
+
+.board_form div.con_title {
+	overflow:hidden;
+	margin:0 auto;
+	width:980px;
+	font-size:22px;
+	height:80px;
+	text-align:left;	
+	border:0px;
+	margin-bottom:30px;
+}
+
+.board_form div.con_title p{
+	font-size:30px;
+	color:#888;
+}
+.board_form01{
+	width:958px;
+	height:100%;
+	overflow:hidden;
+	border:1px solid #bbb;
+	background-color:#fff;
+	padding-top:20px;
+}
+
+.board_form01 table{
+	margin:15px 15px 15px 15px;
+	width:925px;
+}
+.board_form01 table thead th{
+	margin:15px 15px 15px 15px;
+	height:40px;
+	background-color:#3ddcc7;
+	font-size:14px;
+	color:#fff;
+}
+.board_form01 table tr {
+	border-bottom:1px solid #ddd;
+}
+.board_form01 table tr td{
+	height:30px;
+}
+
+.board_button{
+	background-color:#3ddcc7;
+	border:1px solid #0b9f8c;
+	width:100px;
+	height:35px;
+	font-weight:bold;
+	color:#fff;
+	float:right;
+	margin-right:20px;
+	margin-bottom:20px;
+}
+
+/* board 2 */
+
+.board_form02{
+	width:958px;
+	height:100%;
+	overflow:hidden;
+	border:1px solid #bbb;
+	background-color:#fff;
+}
+.board_form03{
+	width:910px;
+	min-height:400px;
+	margin:20px;
+	overflow:hidden;
+}
+.board_form03 div.board_l{
+	float:left;
+	text-align:left;
+	width:230px;
+	min-height:400px;
+	border:1px solid red;
+}
+
+.board_r {
+	text-align:left;
+	min-height:400px;
+	width:650px;
+	float:right;
+}
+
+.board_r ul {
+	margin-bottom:15px;
+}
+.board_r ul li{
+	font-size:16px;
+	color:#333;
+}
+.board_r ul li input{
+	font-size:14px;
+	width:420px;
+	height:35px;
+	border:1px solid #bbb;
+	margin-top:5px;
+}
+.board_r ul.board_divide{
+	float:left;
+	margin-right:15px;
+}
+
+.board_r ul.board_divide li select{
+	width:170px;
+	height:36px;
+	font-size:14px;
+	border:1px solid #bbb;
+	margin-top:5px;
+}
+.board_r ul.board_title{
+	float:left;
+}
+.board_r ul.board_title li input{
+	width:447px;
+}
+.board_r ul.board_contents{
+	clear:both;
+}
+
+.board_form03 div.board_r ul.board_pass {
+	float:left;
+	margin-right:10px;
+}
+.board_form03 div.board_r ul.board_pass li input{
+	width:130px;
+}
+.board_writer{
+	margin-left:370px;
+}
+
+.board_writer li input {
+	margin-left:1px;
+}
+.board_writer li input.board_button01{
+	background-color:#3ddcc7;
+	border:1px solid #0b9f8c;
+	width:80px;
+	height:35px;
+	font-weight:bold;
+	color:#fff;
+}
+.board_writer li input.board_button02{
+	background-color:#fff;
+	border:2px solid #3ddcc7;
+	width:80px;
+	height:35px;
+	font-weight:bold;
+}
+
+/* 1108 */
+/* zip */
+#bg_white{
+	background-color:#fff;
+}
+.zip_bg{
+	margin:60px;
+	width:370px;
+	height:327px;
+}
+.zip_bg > ul{
+	text-align:center;
+	margin-left:0px;
+	margin-top:0px;
+}
+.zip_bg ul li.zip_font{
+	font-size:40px;
+	color:#333;
+	margin-bottom:5px;
+	font-weight:bold;
+}
+.zip_bg ul li.text01{
+	font-size:14px;
+	color:#aaa;
+}
+.zip_check{
+	clear:both;
+	margin-bottom:10px;
+}
+.zip_check ul{
+	margin-left:130px;
+	height:100%;
+	width:100px;
+}
+.zip_check ul li{
+	width:100%;
+	position:relative;
+}
+.zip_check ul li input{
+	background-color:#fff;
+	border:1px solid #3ddcc7;
+	width:100px;
+	height:40px;
+	margin:0 auto;
+}
+.dong_check dl dt{
+	font-size:14px;
+	margin-left:40px;
+}
+
+.dong_check dl dd input{
+	width:280px;
+	height:40px;
+	border:1px solid #ddd;
+	line-height:38px;
+}
+
+/* identity01_01 zip modify */
+
+.info_con div.info_r ul li input.zip_num{
+	width:130px;
+}
+.info_con div.info_r ul li input.zip_num{
+	width:130px;
+}
+.info_con div.info_r ul li input.zip_button{
+	width:100px;
+	background-color:#fff;
+	border:1px solid #3ddcc7;
+}
+
+/* pass new modify */
+.passMod{
+	width:1100px;
+	margin:0 auto;
+	overflow:hidden;
+}
+.passMod h2{
+	text-align:left;
+	font-size:20px;
+	color:#222;
+}
+.iden_info ul.passMod_line{
+	border-top:1px solid #888;
+	text-align:left;
+	
+}
+.iden_info ul.passMod_line li{
+	margin-top:20px;
+	color:#333;
+	font-size:14px;
+}
+.passMod_button{
+	text-align:left;
+	margin-top:50px;
+}
+.passMod_button li{
+	margin-top:10px;
+}
+.passMod_button li input{
+	border:1px solid #888;
+	width:350px;
+	height:45px;
+	margin-right:20px;
+}
+.passMod_button li input[type=button]{
+	width:100px;
+	height:45px;
+	background-color:#3ddcc7;
+	color:#fff;
+}
+
+/* 1109 게시판 검색창 추가  */
+.board_search{
+	text-align:right;
+	overflow:hidden;
+}
+.board_search ul li{
+	float:left;
+	margin-bottom:15px;
+	margin-left:10px;
+}
+.board_search ul {
+	margin-left:606px;
+}
+.board_search ul li select{
+	width:110px;
+	height:25px;
+	border:1px solid #888;
+}
+.board_search ul li input[type=text]{
+	height:20px;
+	margin-top:1px;
+	width:160px;
+}
+.board_search ul li input[type=button]{
+	height:24px;
+	width:40px;
+	margin-top:1px;
+	background-color:#3ddcc7;
+	border:1px solid #0b9f8c;
+}
+
+/* board03 */
+.board_form04{
+	width:958px;
+	height:100%;
+	overflow:hidden;
+	border:1px solid #bbb;
+	background-color:#fff;
+}
+.board_form05{
+	width:910px;
+	margin:20px;
+	overflow:hidden;
+	text-align:left;
+}
+.board_top {
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	border-bottom:2px dotted #ccc;
+}
+.board_top ul.board_t {
+	float:left;
+}
+.board_top ul.board_t li {
+	float:left;	
+	margin-right:20px;
+}
+.board_top ul.board_date{
+	float:right;
+}
+.board_b {
+	clear:both;
+	margin-bottom:10px;
+	overflow:hidden;
+}
+.board_b ul li{
+	float:left;
+}
+.board_text {
+	clear:both;
+}
+.board_text ul li textarea {
+	border:1px solid #ddd;
+	width:900px;
+	min-height:100px;
+}
+.board_bottom {
+	width:100%;
+	padding-left:20px;
+	padding-right:20px;
+	padding-bottom:20px;
+	padding-top:20px;
+	min-height:100px;
+	background-color:#eee;
+}
+.board_letter{
+	min-height:30px;
+	width:870px;
+	border-bottom:1px dotted #ddd;	
+}
+.letter_top ul{
+	float:left;
+}
+.letter_top ul li{
+	float:left;
+}
+.letter_top ul li{
+	float:left;
+	margin-right:5px;
+}
+.letter_top ul li.letter_f{
+	font-weight:bold;
+	font-size:13px;
+}
+.letter_top ul li.letter_f02{
+	font-size:11px;
+}
+.letter_top ul li.letter_cl{
+	clear:both;
+	margin-top:10px;
+}
+.letter_top ul li span{
+	color:#bbb;
+}
+.letter_top ul.letter_r{
+	float:right;
+}
+.letter_top ul.letter_r li span{
+	color:#bbb;
+}
+.letter_top ul.letter_r li{
+	margin-left:5px;
+}
+.letter_bottom {
+	clear:both;
+}
+.letter_bottom ul li{
+	float:left;
+}
+.board_writer02{
+	border-bottom:1px dotted #ddd;
+	width:870px;
+}
+.board_writer02 ul li textarea {
+	border:1px solid #ccc;
+	width:720px;
+	height:70px;
+	margin-left:60px;
+}
+.board_writer02 ul li input[type=button] {
+	border:1px solid #ccc;
+	background-color:#666;
+	width:74px;
+	height:74px;
+	color:#fff;
+}
+
+
+.board_writer03 ul li textarea {
+	border:1px solid #ccc;
+	width:780px;
+	height:70px;
+}
+.board_writer03 ul li input[type=button] {
+	border:1px solid #ccc;
+	background-color:#666;
+	width:74px;
+	height:74px;
+	color:#fff;
+}
+.board_button_bt ul {
+	text-align:right;
+}
+.board_button_bt ul li input[type=button]{
+	margin-left:5px;
+	width:100px;
+	height:35px;
+	border:1px solid #0b9f8c;
+	background-color:#fff;
+}
+
+
+
+/* myReserve01 myReserve02 나의 예약 */
+.myreserve_form{
+	width:960px;
+	min-height:400px;
+	margin:0 auto;
+	margin-top:30px;
+	border:1px solid #bbb;
+	background-color:#fff;
+}
+.myreserve_bg{
+	width:100%;
+	height:50px;
+	background-color:#3ddcc7;
+	text-align:left;
+}
+.myreserve_bg span.my01{
+	font-size:20px;
+	color:#3ddcc7;
+	font-weight:bold;
+	margin-left:200px;
+	line-height:50px;
+}
+.myreserve_bg span.my02{
+	font-size:20px;
+	color:#fff;
+	margin-left:370px;
+	line-height:50px;
+}
+
+.myreserve_bg span.my03{
+	font-size:20px;
+	color:#fff;
+	margin-left:200px;
+	line-height:50px;
+}
+.myreserve_bg span.my04{
+	font-size:20px;
+	color:#3ddcc7;
+	font-weight:bold;
+	margin-left:370px;
+	line-height:50px;
+}
+
+.reserve_board01{
+	width:958px;
+	height:100%;
+	overflow:hidden;
+	background-color:#fff;
+}
+.reserve_text01{
+	width:960px;
+	margin:0 auto;
+	text-align:left;
+	margin-top:40px;
+}
+.reserve_text01 ul li.r_tt{
+	color:#555;
+	font-size:14px;
+	font-weight:bold;
+}
+.reserve_text01 ul li.r_t{
+	color:#333;
+	font-size:27px;
+}
+.reserve_text02{
+	margin:15px;
+	text-align:left;
+}
+.reserve_board01 table{
+	margin:15px 15px 15px 15px;
+}
+.reserve_board01 table thead th{
+	margin:15px 15px 15px 15px;
+	height:40px;
+	background-color:#3ddcc7;
+	font-size:14px;
+	color:#fff;
+}
+.reserve_board01 table tr {
+	border-bottom:1px solid #ddd;
+}
+.reserve_board01 table tr td{
+	height:30px;
+}
+
+/* reserve 05 두번째 테이블 */
+
+.reserve_form11{
+	width:958px;
+	height:100%;
+	overflow:hidden;
+	border:1px solid #bbb;
+	background-color:#fff;
+}
+.reserve_form11 table{
+	margin:15px 15px 15px 15px;
+}
+.reserve_form11 table thead th{
+	margin:15px 15px 15px 15px;
+	height:40px;
+	background-color:#3ddcc7;
+	font-size:14px;
+	color:#fff;
+}
+.reserve_form11 table thead th.th_l{
+	height:40px;
+	background-color:#3ddcc7;
+	font-size:14px;
+	color:#fff;
+	text-align:left;
+	padding-left:10px;
+}
+.reserve_form11 table tr {
+	border-bottom:1px solid #ddd;
+}
+.reserve_form11 table tr td{
+	height:30px;
+}
+.reserve_form11 table tbody tr td ul li{
+	padding-left:10px;
+}
+.reserve_form11 table tr td ul li span.color_cyan{
+	font-size:14px;
+	font-weight:bold;
+	color:#3ddcc7;
+}
+.reserve_form11 table tr td ul li span.text_bold{
+	font-size:14px;
+	font-weight:bold;
+	color:#333;
+}
+
+/* reserve 05 세번째 테이블 */
+
+.reserve_form12{
+	width:958px;
+	height:100%;
+	overflow:hidden;
+	border:1px solid #bbb;
+	background-color:#fff;
+}
+.reserve_form12 div.reser_l{
+	margin:5px 0px 15px 15px;
+	width:445px;
+	min-height:100px;
+	float:left;
+}
+.reserve_form12 div.reser_l dl {
+	line-height:22px;
+}
+.reserve_form12 div.reser_l p{
+	text-align:left;
+	font-size:14px;
+	font-weight:bold;
+	color:#333;
+}
+.reserve_form12 div.reser_l dl dt{
+	float:left;
+	font-size:12px;
+	font-weight:bold;
+	color:#333;
+}
+.reserve_form12 div.reser_l dl dt span{
+	font-size:14px;
+	font-weight:bold;
+}
+.reserve_form12 div.reser_l dl dd{
+	text-align:right;
+}
+.reserve_form12 div.reser_r{
+	margin:15px 15px 15px 0px;
+	width:470px;
+	min-height:90px;
+	border-left:1px dotted #bbb;
+	float:right;
+}
+.reserve_form12 div.reser_r ul li{
+	margin-top:19px;
+	padding:20px;
+}
+.reserve_form12 div.reser_r ul li a{
+	color:#3ddcc7;
+	font-weight:bold;
+}
+
+
+
+/* missingbbs01 분실물 게시판 */
+
+.missBbs_form01{
+	width:958px;
+	height:100%;
+	overflow:hidden;
+	border:1px solid #bbb;
+	background-color:#fff;
+}
+
+.board_button{
+	background-color:#3ddcc7;
+	border:1px solid #0b9f8c;
+	width:100px;
+	height:35px;
+	font-weight:bold;
+	color:#fff;
+	float:right;
+	margin-right:20px;
+	margin-bottom:20px;
+}
+
+.board_search{
+	text-align:right;
+	overflow:hidden;
+}
+.board_search ul li{
+	float:left;
+	margin-bottom:15px;
+	margin-left:10px;
+}
+.board_search ul {
+	margin-left:606px;
+}
+.board_search ul li select{
+	width:110px;
+	height:25px;
+	border:1px solid #888;
+}
+.board_search ul li input[type=text]{
+	height:20px;
+	margin-top:1px;
+	width:160px;
+}
+.board_search ul li input[type=button]{
+	height:24px;
+	width:40px;
+	margin-top:1px;
+	background-color:#3ddcc7;
+	border:1px solid #0b9f8c;
+}
+.missbbs01_margin {
+	margin-bottom:20px;
+	margin-left:20px;
+}
+.missbbs01_margin ul.missbbs_box{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+.missbbs_box li{
+	width:23%;
+	border:1px solid #ddd;
+	min-height:300px;
+	margin-right:16px;
+	float:left;
+	margin-bottom:20px;
+}
+.missbbs_box li div.miss_img
+{
+	padding:10px;
+	border-bottom:1px solid #ddd;
+	height:140px;
+}
+
+.miss_box2 h3{
+	font-size:18px;
+	color:#333;
+	margin-bottom:20px;
+	font-weight:bold;
+}
+.miss_box2 p{
+	margin-bottom:5px;
+	text-align:left;
+	margin-left:15px;
+	margin-right:15px;
+	line-height:11px;
+}
+.miss_box2{
+	height:140px;
+}
+.miss_box2 p span{
+	color:#444;
+	font-weight:bold;
+}
+.missbbs_box li.m_rclean{
+	margin-right:0px;
+}
+
+/* missingBbs02 분실물 게시판 */
+.miss_title {
+	width:100%;
+	height:70px;
+	border-top:2px solid #888;
+	border-bottom:1px solid #ddd;
+}
+.miss_title ul {
+	text-align:center;
+	font-size:22px;
+	color:#333;
+}
+
+.miss_info{
+	border-bottom:2px solid #888;
+	overflow:hidden;
+	height:50px;
+	font-size:14px;
+}
+.miss_info dl {
+	float:left;
+	margin-left:100px;
+}
+.miss_con ul li{
+	text-align:center;
+	margin-bottom:30px;
+}
+.miss_info dl dt{
+	float:left;
+}
+.miss_info dl dd{
+	float:left;
+	text-align:left;
+	margin-left:0px;
+}
+/* 자주하는 질문 */
+.faqbbs_form{
+	width:958px;
+	height:100%;
+	overflow:hidden;
+	border:1px solid #bbb;
+	background-color:#fff;
+}
+.faq_bbs{
+	width:918px;
+	margin:20px;
+	height:100%;
+}
+.faq_bbs ul{
+	height:100%;
+	border-top:2px solid #3ddcc7;
+}
+.faq_bbs ul li{
+	height:45px;
+	border-bottom:1px solid #ddd;
+	width:100%;
+	text-align:left;
+	line-height:45px;
+	font-size:14px;
+	color:#333;
+}
+.faq_bbs ul li span.faq_a{
+	width:17px;
+	height:21px;
+	display:inline-block;
+	background-repeat:no-repeat;
+	background-position-x:0px;
+	background-position-y:1px;
+	background-size:auto;
+	background-origin:padding-box;
+	background-clip:border-box;
+	background-color:transparent;
+}
+.faq_bbs ul div{
+	padding:10px;
+	min-height:25px;
+	text-align:left;
+}
+.faq_bbs ul div p{
+	text-align:left;
+	margin-left:10px;
+}
+
+/* sub_menu*/
+div.sub_menu{
+	width:100%;
+	height:250px;
+	background:white;
+	overflow:hidden;
+	background-color:#fff;
+	-webkit-box-shadow: 0 0 5px 1px #6B6B6B;
+	-moz-box-shadow: 0 0 5px 1px #6B6B6B;
+	box-shadow: 0 4px 5px 0px #6B6B6B;
+	bottom:0px;
+	right:0px;	
+}
+div.sub_menu_l{
+	float:left;
+	width:400px;
+	height:220px;
+	margin-left:50px;
+	background-position:50% 40% ;
+	background-repeat:no-repeat; 
+	margin-top:20px;
+}
+div.sub_menu ul {
+	float:right;
+	text-align:left;	
+	margin-right:100px;
+	margin-top:20px;
+}
+div.sub_menu ul li span{
+	color:#3ddcc7;
+	font-size:16px;
+	font-weight:bold;
+}
+div.sub_menu ul li{
+	line-height:37px;
+	font-size:15px;
+	color:#222;
+}
+
+/* 공지사항 notice */
+
+.notice_form01{
+	width:958px;
+	height:100%;
+	overflow:hidden;
+	border:1px solid #bbb;
+	background-color:#fff;
+}
+
+.board_button{
+	background-color:#3ddcc7;
+	border:1px solid #0b9f8c;
+	width:100px;
+	height:35px;
+	font-weight:bold;
+	color:#fff;
+	float:right;
+	margin-right:20px;
+	margin-bottom:20px;
+}
+
+.board_search{
+	text-align:right;
+	overflow:hidden;
+}
+.board_search ul li{
+	float:left;
+	margin-bottom:15px;
+	margin-left:10px;
+}
+.board_search ul {
+	margin-left:606px;
+}
+.board_search ul li select{
+	width:110px;
+	height:25px;
+	border:1px solid #888;
+}
+.board_search ul li input[type=text]{
+	height:20px;
+	margin-top:1px;
+	width:160px;
+}
+.board_search ul li input[type=button]{
+	height:24px;
+	width:40px;
+	margin-top:1px;
+	background-color:#3ddcc7;
+	border:1px solid #0b9f8c;
+}
+
+
+.notice01_margin {
+	margin-left:20px;
+}
+.notice01_margin ul.notice01_box{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+.notice01_box li{
+	width:23%;
+	margin-right:16px;
+	float:left;
+	margin-bottom:20px;
+	padding:0;
+}
+
+.notice01_box li p.notice_p01{
+	width:100%;
+	height:150px;
+	background-color:#ddd;
+	margin-top:7px;
+	margin-bottom:0;
+}
+.notice01_box li p.notice_p01 img{
+	width:100%;
+	margin-left:-20px;
+	height:150px;
+	border:3px solid red;
+}
+.notice01_box li p.notice_p02{
+	width:100%;
+	height:100px;
+	font-size:11px;
+	line-height:18px;
+	text-align:left;
+	color:#888;
+	margin-top:7px;
+	margin-bottom:0;
+}
+.notice01_box li p.notice_p02{
+	width:100%;
+	height:100px;
+	font-size:11px;
+	line-height:18px;
+	text-align:left;
+	color:#888;
+	margin-top:7px;
+	margin-bottom:0;
+}
+.notice01_box li dl{
+	background-color:#eee;
+	height:56px;
+	margin-top:0;
+	margin-bottom:0;
+	padding:7px;
+}
+.notice01_box li dl dt{
+	margin-top:0;
+	margin-bottom:0;
+	padding:7px;
+	position:relative;
+	text-align:left;
+	color:#333;
+	font-weight:bold;
+	font-size:14px;
+}
+.notice01_box li dl dt span{
+	position:absolute;
+	right:0px;
+	font-size:10px;
+	color:#999;
+	top:11px;
+}
+.notice01_box li dl dd{
+	text-align:left;
+	color:#333;
+	margin-left:7px;
+}
+.notice_box2{
+	height:140px;
+}
+.notice_box2 p span{
+	color:#444;
+	font-weight:bold;
+}
+.notice_box2 li.m_rclean{
+	margin-right:0px;
+}
+
+/* 공지사항 notice02 */
+.notice_title {
+	width:100%;
+	height:70px;
+	border-top:2px solid #888;
+	border-bottom:1px solid #ddd;
+}
+.notice_title ul {
+	text-align:center;
+	font-size:22px;
+	color:#333;
+}
+
+.notice_info{
+	border-bottom:2px solid #888;
+	overflow:hidden;
+	height:50px;
+	font-size:14px;
+}
+.notice_info dl {
+	float:left;
+	margin-left:100px;
+}
+.notice_info dl dt{
+	float:left;
+}
+.notice_con ul li{
+	text-align:center;
+	margin-bottom:30px;
+}
+
+
+/* 달력  */
+.date_form {
+	margin:0 auto;
+	width:100%;
+	height:100%;
+	padding:20px;
+	background-color:#fff;
+}
+.date_form p.df_f{
+	font-size:28px;
+	color:#333;
+	margin-left:120px;
+	font-weight:bold;
+}
+.date_form p.df_f2{
+	font-size:14px;
+	color:#aaa;
+	margin-left:40px;
+	margin-top:-25px;
+	margin-bottom:30px;
+}
+.date_form p.df_i{
+	margin-left:130px;
+	margin-top:-20px;
+}
+.date_form ul{
+	margin:0 auto;
+	width:100%;
+	height:100%;
+}
+.date_form ul li{
+	font-size:16px;
+	color:#888;
+	
+}
+.date_form ul li.date_c01{
+	margin-right:10px;
+}
+
+.date_form ul li input[type=text]{
+	font-size:14px;
+	border:1px solid #ddd;
+	height:30px;
+	width:250px;
+	margin-bottom:10px;
+}
+.date_form ul li input[type=button]{
+	background-color:#3ddcc7;
+	border:1px solid #0b9f8c;
+	color:#fff;
+	width:90px;
+	height:35px;
+	margin-left:130px;
+	margin-top:20px;
+}
+

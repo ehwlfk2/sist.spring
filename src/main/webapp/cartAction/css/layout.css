@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+#wrap {
+	width:100%;
+	position:relative; 
+	text-align:center; 
+	overflow:hidden;
+	margin:0 auto;
+}
+#header {
+	width:100%;
+	position:relative; 
+	margin:0 auto;
+} 
+#container {
+	width:100%;
+	position:relative; 
+	margin:0 auto;
+	min-height:300px;
+}
+#sub_container {
+	width:1260;
+	position:relative; 
+	margin:0 auto;
+	min-height:500px;
+}
+

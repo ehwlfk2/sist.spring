@@ -1,0 +1,9 @@
+.list_thumb {overflow:hidden}
+.list_thumb li {float:left;width:132px;padding-right:20px}
+.list_thumb .link_thumb {display:block;border:1px solid #e9e9e9}
+.list_thumb .thumb_img {display:block}
+.list_thumb .tit_subject {display:block;margin-top:10px}
+.list_thumb .tit_subject .link_tit {font-weight:bold;font-size:12px;line-height:14px;color:#333}
+.list_thumb .txt_desc {display:block;margin-top:8px}
+.list_thumb .txt_desc .link_txt {font-size:12px;line-height:14px;color:#666}
+.list_thumb .txt_time {display:block;margin-top:10px;font-size:11px;line-height:13px;color:#aaa}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+
+	<!-- What, When -->
+	<bean id="beforeAdvise" class="sist.com.aop.basic.BeforeAdviceBean"></bean>
+	<bean id="AfterAdvise" class="sist.com.aop.basic.AfterAdviseBean"></bean>
+	<bean id="aroundAdvise" class="sist.com.aop.basic.AroundAdviseEx"></bean>
+	<bean id="exceptionAdvise" class="sist.com.aop.basic.ExceptionAdvise"></bean>
+	<bean id="mybatisDao" class="sist.com.aop.basic.MyBatisDao" scope="singleton"></bean>
+	
+	<aop:config>
+		<aop:aspect id="before" ref="beforeAdvise">
+			<!-- 
+			pointcut = 약속된 시점(접근제한자 returnType package.class.method(argument)) 
+			1. 	* is wildCard! 
+			2. 	link : https://sjh836.tistory.com/157 
+			-->
+			<aop:before method="beforeMethod" pointcut="execution(public * sist.com.aop.basic.Dao*.*(..))"/>
+		</aop:aspect>
+		<aop:aspect id="after" ref="AfterAdvise">
+			<aop:after method="afterMethod" pointcut="execution(public * sist.com.aop.basic.Dao*.*(..))"/>
+		</aop:aspect>
+		<aop:aspect id="around" ref="aroundAdvise">
+			<aop:around method="messageAround" pointcut="execution(public * sist.com.aop.basic.Dao*.*(..))"/>
+		</aop:aspect>
+	</aop:config>
+	
+</beans>

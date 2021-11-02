@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org./dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sist.com.vo.transaction">
+
+	<!-- select -->
+	<select id="selectAllTransaction" resultType="transaction">
+		select no, msg,
+		regdate from TransactionDB
+	</select>
+
+	<select id="selectNoSeqTransaction"
+		resultType="java.lang.String">
+		select TRANSACTIONDB_SEQ.nextval from dual
+	</select>
+
+	<!-- insert -->
+	<insert id="insertMsgTransaction" parameterType="transaction">
+		insert into
+		TransactionDB (
+		no, msg, regdate
+		) values (
+		TRANSACTIONDB_SEQ.nextval, '${msg}', sysdate
+		)
+	</insert>
+
+	<insert id="insertAllTransaction" parameterType="transaction">
+		insert into
+		TransactionDB (
+		no, msg, regdate
+		) values (
+		${no}, '${msg}', sysdate
+		)
+	</insert>
+
+	<!-- update -->
+	<update id="updateNoTransaction" parameterType="transaction">
+		update
+		transactionDB set msg = '${msg}', regdate = sysdate where no = ${no}
+	</update>
+
+	<!-- delete -->
+	<delete id="deleteNoTransaction" parameterType="transaction">
+		delete
+		transactionDB where no = ${no}
+	</delete>
+
+	<delete id="deleteMsgTransaction" parameterType="transaction">
+		delete
+		transactionDB where msg = '${msg}'
+	</delete>
+
+	<delete id="deleteNoMsgTransaction" parameterType="transaction">
+		delete
+		transactionDB where no = ${no} and msg = '${msg}'
+	</delete>
+	
+</mapper>

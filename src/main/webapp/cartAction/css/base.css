@@ -1,0 +1,275 @@
+﻿@charset "utf-8";
+
+@font-face {font-family:nanum; src:url(../css/NanumGothic.eot);}
+@font-face {font-family:nanumEB; src:url(../css/NanumGothicExtraBold.eot);}
+@font-face {font-family:MalgunGothic; src:url(../css/MalgunGothic.eot);}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, p,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend {
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	/* background: transparent; */
+}
+
+/* 
+table, caption, tbody, tfoot, thead, tr, th, td { 
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+*/
+html {
+	overflow-y:scroll;
+}
+
+html, body {
+	width:100%;
+	background-color: #fff;
+	*word-break:break-all;-ms-word-break:break-all; 
+	margin:0px;
+	background-color:#f8f8f8;
+ }
+
+body, div {
+	font-size: 12px;
+	/*font-family: 'nanum', 'verdana', 'arial', 'dotum', '돋움';*/
+	font-family: '맑은고딕','Malgun Gothic','verdana','arial','dotum', '돋움';
+	color: #6e6e6e;
+	letter-spacing:0px;
+	margin:0px;
+}
+
+select, input, textarea {
+	font-size: 1.0em;
+	font-family: 'nanum','verdana', 'arial', 'dotum', '돋움';
+	/*font-family: '맑은고딕','Malgun Gothic','verdana','arial','dotum', '돋움';*/
+	vertical-align: middle;
+	color: #6b6b6b;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+a:link { text-decoration: none; color: #666; }
+a:visited { text-decoration: none; color: #666;}
+a:hover { text-decoration: underline; color: #666;}
+a:active { text-decoration: none; color: #666;}
+
+a:link.desc { text-decoration: none; color: #fff; }
+a:visited.desc { text-decoration: none; color: #fff;}
+a:hover.desc { text-decoration: underline; color: #fff;}
+a:active.desc { text-decoration: none; color: #fff;}
+
+/* a:link { color: #6e6e6e; text-decoration: none; cursor:pointer;}
+a:visited { color: #6e6e6e; text-decoration: none; }
+a:hover { color: #0c65ba; text-decoration: none; }
+a:active { color: #6e6e6e; text-decoration: none; }
+a:focus { color: #6e6e6e; text-decoration: none; } */
+
+input {
+	padding: 0;
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	vertical-align: top;
+}
+
+table th {
+	font-size:11px;
+}
+
+img,fieldset {
+	border:0px;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+hr {
+	width:100%;
+	border:1px solid #e1e1e1; 
+}
+
+label {
+	cursor: pointer;
+}
+
+legend, caption {
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+	font-size: 0;
+	line-height: 0;
+}
+
+.hidden {
+	position: absolute;
+	width: 0;
+	height: 0;
+	visibility: hidden;
+	font-size: 0;
+	line-height: 0;
+}
+.png24 {
+	tmp:expression(setPng24(this));
+}
+/*
+q:before, q:after {
+	content: "";
+}
+
+blockquote, q {
+	quotes: none;
+}
+*/
+/* remember to define focus styles! */
+/*
+:focus {
+	outline: 0;
+}
+*/
+/* remember to highlight inserts somehow! */
+/*
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+*/
+
+
+/*Image-size*/
+.img20 { width:20%; }
+.img40 { width:40%; }
+.img50 { width:50%; }
+.img60 { width:60%; }
+.img80 { width:80%; }
+.img85 { width:85%; }
+.img90 { width:90%; }
+.img100 { width:100% }
+
+/*Font-size*/
+.ft08 { font-size:0.8em; }
+.ft09 { font-size:0.9em; }
+.ft12 { font-size:1.2em; }
+.ft15 { font-size:1.5em; }
+.ft20 { font-size:2em; }
+
+/*Margin*/
+.mb0 { margin-bottom: 0px; }
+.mb5 { margin-bottom: 5px; }
+.mb10 { margin-bottom: 10px; }
+.mb15 { margin-bottom: 15px; }
+.mb20 { margin-bottom: 20px; }
+.mb25 { margin-bottom: 25px; }
+.mb30 { margin-bottom: 30px; }
+
+.mt0 { margin-top: 0px; }
+.mt5 { margin-top: 5px; }
+.mt10 { margin-top: 10px; }
+.mt15 { margin-top: 15px; }
+.mt20 { margin-top: 20px; }
+.mt25 { margin-top: 25px; }
+.mt30 { margin-top: 30px; }
+
+.ml0 { margin-left: 0px; }
+.ml5 { margin-left: 5px; }
+.ml10 { margin-left: 10px; }
+.ml15 { margin-left: 15px; }
+.ml20 { margin-left: 20px; }
+.ml25 { margin-left: 25px; }
+.ml30 { margin-left: 30px; }
+
+.mr0 { margin-right: 0px; }
+.mr5 { margin-right: 5px; }
+.mr10 { margin-right: 10px; }
+.mr15 { margin-right: 15px; }
+.mr20 { margin-right: 20px; }
+.mr23 { margin-right: 23px; }
+.mr25 { margin-right: 25px; }
+.mr30 { margin-right: 30px; }
+.mr40 { margin-right: 40px; }
+
+/*Padding*/
+.pb05 { padding-bottom: 5px; }
+.pb10 { padding-bottom: 10px; }
+.pb15 { padding-bottom: 15px; }
+.pb20 { padding-bottom: 20px; }
+.pb25 { padding-bottom: 25px; }
+.pb30 { padding-bottom: 30px; }
+
+.pt10 { padding-top: 10px; }
+.pt15 { padding-top: 15px; }
+.pt20 { padding-top: 20px; }
+.pt25 { padding-top: 25px; }
+.pt30 { padding-top: 30px; }
+
+.pl10 { padding-left: 10px; }
+.pl15 { padding-left: 15px; }
+.pl17 { padding-left: 17px; }
+.pl20 { padding-left: 20px; }
+.pl25 { padding-left: 25px; }
+.pl30 { padding-left: 30px; }
+.pl50 { padding-left: 50px; }
+
+.pr3 { padding-right: 3px; }
+.pr10 { padding-right: 10px; }
+.pr15 { padding-right: 15px; }
+.pr16 { padding-right: 16px; }
+.pr17 { padding-right: 17px; }
+.pr20 { padding-right: 20px; }
+.pr25 { padding-right: 25px; }
+.pr30 { padding-right: 30px; }
+
+/*color*/
+.dh_red { color: #c30b06 }
+.dh_red_st { color: #c30b06; font-weight:bold; }
+
+.dh_blue { color: #064888; }
+.dh_blue_st { color: #064888; font-weight:bold; }
+
+.dh_black { color:#2f2f2f; }
+.dh_black_st { color: #000; font-weight:bold; }
+
+.dh_orange { color: #f97613; }
+.dh_orange_st { color: #f97613; font-weight:bold; }
+
+.dh_brown { color: #966c3e; }
+.dh_brown_st { color: #966c3e; font-weight:bold; }
+
+.dh_white { color:#fff; }
+.dh_white a,
+.dh_white a:hover,
+.dh_white a:visited,
+.dh_white a:active,
+.dh_white a:focus { color: #fff; text-decoration:underline; }
+
+.dh_save { color: #79c54f; }
+.dh_save a,
+.dh_save a:visited,
+.dh_save a:hover,
+.dh_save a:active,
+.dh_save a:focus { color: #79c54f; text-decoration:underline; }
+
+.dh_with { color: #449688; }
+.dh_with a,
+.dh_with a:visited,
+.dh_with a:hover,
+.dh_with a:active,
+.dh_with a:focus { color: #449688; text-decoration:underline; }

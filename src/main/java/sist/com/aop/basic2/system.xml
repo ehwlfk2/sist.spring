@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+	<bean id="system" class="sist.com.aop.basic2.SystemFileImp"></bean>
+	<bean id="beforeAdvice" class="sist.com.aop.basic2.SystemBeforeAdvice"></bean>
+	<bean id="afterAdvice" class="sist.com.aop.basic2.SystemAfterAdvice"></bean>
+	<bean id="pointcut" class="org.springframework.aop.aspectj.AspectJExpressionPointcut">
+		<property name="expression" value="execution(public * sist.com.aop.basic2.System*.*())"></property>
+	</bean>
+	
+	<bean id="beforeAdvisor" class="org.springframework.aop.support.DefaultPointcutAdvisor">
+		<property name="advice" ref="beforeAdvice"></property>
+		<property name="pointcut" ref="pointcut"></property>
+	</bean>
+
+	<bean id="afterAdvisor" class="org.springframework.aop.support.DefaultPointcutAdvisor">
+		<property name="advice" ref="afterAdvice"></property>
+		<property name="pointcut" ref="pointcut"></property>
+	</bean>
+	
+	<bean id="aopBean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="system"></property>
+		<property name="interceptorNames">
+			<list>
+				<value>beforeAdvisor</value>
+				<value>afterAdvisor</value>
+			</list>
+		</property>
+	</bean>	
+	
+
+</beans>

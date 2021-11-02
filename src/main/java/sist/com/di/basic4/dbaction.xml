@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+<!-- Annotation을 쓸수 있게 만들어주는 Handler -->
+<context:annotation-config/>
+
+<!-- Handling 하기 위해서 지정된 위치의 Annotation을  Scanning하는 명령어. -->
+<context:component-scan base-package="sist.com.di.basic4"></context:component-scan>
+
+<!-- 
+<bean id="SqlSessionFactory" class="sist.com.di.basic4.SqlSessionFactoryBean"></bean>
+
+<bean id="dao" class="sist.com.di.basic4.Dao" scope="singleton">
+	<property name="bean" ref="SqlSessionFactory"></property>
+</bean>
+ -->
+
+</beans>

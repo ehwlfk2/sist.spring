@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<context:annotation-config/>
+	<context:component-scan base-package="sist.com.di.basic5"></context:component-scan>
+
+	<bean id="action1" class="sist.com.di.basic5.ActionMessage" p:message="hi1" p:count="500">
+		<qualifier value="q1"></qualifier>
+	</bean>
+	<bean id="action2" class="sist.com.di.basic5.ActionMessage" p:message="hi2" p:count="499">
+		<qualifier value="q2"></qualifier>	
+	</bean>
+	
+</beans>

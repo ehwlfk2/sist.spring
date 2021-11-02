@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 기본 옵션 : xmlns, xmlns:xsi, xis:schemaLocation 추가 옵션 : Namespaces에서 선택한 
+	옵션 (example... xmlns: context, mvc, p) -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Book -->
+	<bean id="book1" class="sist.com.di.basic2.Book" scope="prototype"
+		init-method="initBook">
+		<property name="name" value="부동심의 정석"></property>
+		<property name="author" value="김태라"></property>
+		<property name="price" value="27000"></property>
+		<property name="publisher" value="Thanks.com/mind"></property>
+	</bean>
+
+	<bean id="book2" class="sist.com.di.basic2.Book" scope="prototype"
+		p:name="Presentation의 정석" p:author="도경진" p:price="30000"
+		p:publisher="Thanks.com/pt" init-method="initBook">
+	</bean>
+
+	<bean id="book3" class="sist.com.di.basic2.Book" scope="prototype"
+		init-method="initBook">
+		<property name="name" value="Love의 정석"></property>
+		<property name="author" value="송민제"></property>
+		<property name="price" value="52000"></property>
+		<property name="publisher" value="Thanks.com/love"></property>
+	</bean>
+
+	<bean id="book4" class="sist.com.di.basic2.Book" scope="prototype"
+		p:name="교육의 정석" p:author="이응수" p:price="15000" p:publisher="쌍용교육센터"
+		init-method="initBook">
+	</bean>
+
+	<!-- Store -->
+	<bean id="store1" class="sist.com.di.basic2.Store"
+		scope="singleton">
+		<!-- list -->
+		<property name="list">
+			<list>
+				<ref bean="book1" />
+				<ref bean="book1" />
+				<ref bean="book1" />
+			</list>
+		</property>
+		<!-- set : 중복이 불가하는 특성상 아래 코드는 1번만 불린다. -->
+		<property name="set">
+			<set>
+				<ref bean="book2" />
+				<ref bean="book2" />
+				<ref bean="book2" />
+			</set>
+		</property>
+		<!-- map : key, value 구조 -->
+		<property name="map">
+			<map>
+				<entry>
+					<key>
+						<value type="java.lang.Integer">1</value>
+					</key>
+					<ref bean="book1" />
+				</entry>
+				<entry>
+					<key>
+						<value type="java.lang.Integer">2</value>
+					</key>
+					<ref bean="book2" />
+				</entry>
+				<entry>
+					<key>
+						<value type="java.lang.Integer">3</value>
+					</key>
+					<ref bean="book3" />
+				</entry>
+			</map>
+		</property>
+		<property name="properties">
+			<props>
+				<prop key="Red">뚝뚝 떨어지는 피의 축제</prop>
+				<prop key="Orange">오렌지 빛 노을</prop>
+				<prop key="Blue">파란 바다</prop>
+			</props>
+		</property>
+	</bean>
+
+
+	<bean id="store2" class="sist.com.di.basic2.Store"
+		scope="singleton">
+		<property name="list">
+			<list>
+				<ref bean="book3" />
+				<ref bean="book3" />
+				<ref bean="book3" />
+			</list>
+		</property>
+		<property name="set">
+			<set>
+				<ref bean="book4" />
+				<ref bean="book4" />
+				<ref bean="book4" />
+			</set>
+		</property>
+	</bean>
+
+</beans>

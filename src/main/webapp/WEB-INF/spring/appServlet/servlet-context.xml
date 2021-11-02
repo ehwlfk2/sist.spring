@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans
+	xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing 
+		infrastructure -->
+
+	<!-- Enables the Spring MVC @Controller programming model ① This is "HandlerMapping 
+		& HandlerAdapter" role. ② component-scan을 통해서 스캔된 bean중에서 해당 요청과 알맞는 Controller를 
+		찾아서 연결!! -->
+	<annotation-driven />
+
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving 
+		up static resources in the ${webappRoot}/resources directory ${webappRoot}/resources 
+		디렉토리에서 정적 리소스를 효율적으로 제공하여 /resources/**에 대한 HTTP GET 요청을 처리합니다. -->
+	<resources mapping="/resources/**" location="/resources/" />
+	<!-- mvcSpringDemo안에 있는 js때문에 불러왔다 -->
+	<resources mapping="/mvcSpringDemo/**"
+		location="/mvcSpringDemo/" />
+	<!-- boardMVC 이미지가 먹힐 수 있을까? YES -->
+	<resources mapping="/boardMVC/**" location="/boardMVC/" />
+	<!-- Cookie 연습을 위한 폴더 -->
+	<resources mapping="/cookieSession/**" location="/cookieSession/" />
+	<!-- css 연습을 위한 폴더 -->
+	<resources mapping="/cssFlex/**" location="/cssFlex/" />
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
+		in the /WEB-INF/views directory @Controller가 /WEB-INF/views 디렉터리의 .jsp 리소스에 
+		렌더링하기 위해 Resolves view들이 선택된다. -->
+	<!-- *Dispatcher일 때만 이 아래 코드 (Resolves views) 를 탄다. redirect일 경우에는 안 탄다. -->
+	<beans:bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<!-- prefix : 접두사, suffix : 접미사 -->
+		<!-- <beans:property name="prefix" value="/WEB-INF/views/" /> -->
+		<beans:property name="prefix" value="/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+
+	<!-- DBMS : Oracle database info -->
+	<beans:bean id="database"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<beans:property name="driverClassName"
+			value="oracle.jdbc.OracleDriver" />
+		<beans:property name="url"
+			value="jdbc:oracle:thin:@localhost:1521:orcl" />
+		<beans:property name="username" value="C##APPLE" />
+		<beans:property name="password" value="1234" />
+	</beans:bean>
+
+	<!-- BasicDataSource를 대신해서 가지는 객체. 형태:logds(database) -->
+	<beans:bean id="logds"
+		class="net.sf.log4jdbc.Log4jdbcProxyDataSource">
+		<!-- 생성자로 DI -->
+		<beans:constructor-arg ref="database" />
+		<beans:property name="logFormatter"> <!-- setlogFormatter() -->
+			<beans:bean
+				class="net.sf.log4jdbc.tools.Log4JdbcCustomFormatter">
+				<beans:property name="loggingType" value="MULTI_LINE" />
+				<!-- <beans:property name="margin" value="5"/> margin 숫자만큼 공백을 넣어주는 포맷문자 
+					'#'이 JDK버전에 올라가면서 에러 발생. -->
+				<!-- 접두사 -->
+				<beans:property name="sqlPrefix" value="SLQ: " />
+			</beans:bean>
+		</beans:property>
+	</beans:bean>
+
+	<!-- transaction을 도와주는 library -->
+	<beans:bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
+		p:dataSource-ref="logds">
+	</beans:bean>
+	<!-- tx : transaction -->
+	<tx:annotation-driven
+		transaction-manager="transactionManager" />
+	<!-- txAdvice = transaction advice -->
+	<tx:advice id="txAdvice"
+		transaction-manager="transactionManager">
+		<tx:attributes>
+			<!-- <tx:method name="*select" propagation="NEVER"/> 특정 name의 메소드를 실행할 
+				때 트랜잭션이 필요없다는 것을 의미 -->
+			<tx:method name="*" propagation="REQUIRED" /> <!-- 메소드를 실행할 때 트랜잭션이 필요하다는 것을 의미 -->
+		</tx:attributes>
+	</tx:advice>
+	<!-- txAdvice를 aspect로 등록한다. -->
+	<aop:config>
+		<!-- (advisor = what + when), (aspect = advisor + where) -->
+		<aop:advisor advice-ref="txAdvice"
+			pointcut="execution(public * sist.com.dao.*.*(..))" />
+	</aop:config>
+
+	<!-- DBMS : MyBatis 연동! factory pattern -->
+	<beans:bean id="sqlSessionFactory"
+		class="org.mybatis.spring.SqlSessionFactoryBean">
+		<!-- ProxyDataSource로 변경하기 전: <beans:property name="dataSource" ref="database" 
+			/> -->
+		<beans:property name="dataSource" ref="logds" />
+		<!-- <property name="mapperLocations" value="classpath*:sample/config/mappers/**/*.xml" 
+			/> Internet에서 찾은 value와 아래의 value와는 무슨 차이가 있는가? -->
+		<beans:property name="configLocation"
+			value="/WEB-INF/Config.xml" />
+	</beans:bean>
+
+	<!-- DBMS : mybatis instance : di of factory pattern -->
+	<beans:bean id="sqlSessionTemplate"
+		class="org.mybatis.spring.SqlSessionTemplate">
+		<beans:constructor-arg>
+			<beans:ref bean="sqlSessionFactory" />
+		</beans:constructor-arg>
+	</beans:bean>
+
+	<!-- Validate 에서 사용하는 에러 메세지를 '메세지번들'을 통해 모든 언어에서 통용 번역해준다. -->
+	<beans:bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<beans:property name="basenames">
+			<beans:list>
+				<beans:value>WEB-INF/validate</beans:value>
+				<beans:value>WEB-INF/user</beans:value>
+			</beans:list>
+		</beans:property>
+		<beans:property name="defaultEncoding" value="UTF-8">
+
+		</beans:property>
+	</beans:bean>
+
+
+	<!-- write.jsp에 form의 속성으로 있는 enctype="multipart/form-data"를 지원하는 클래스~ -->
+	<beans:bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<beans:property name="defaultEncoding" value="UTF-8" />
+		<!-- Size의 단위 "Byte" -->
+		<beans:property name="maxUploadSize" value="300000000" />
+	</beans:bean>
+
+	<beans:bean id="intercepterPro"
+		class="sist.com.vo.IntercepterPro" scope="singleton" />
+	<interceptors>
+		<interceptor>
+			<mapping path="/login.do" />
+			<beans:ref bean="intercepterPro" />
+		</interceptor>
+	</interceptors>
+
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+	<!-- 해당 위치의 어노테이션을 읽어들여서 bean으로 등록! -->
+	<context:component-scan
+		base-package="sist.com.controller" />
+	<context:component-scan
+		base-package="sist.com.dao" />
+	<context:component-scan
+		base-package="sist.com.di.basic6" />
+	<context:component-scan
+		base-package="sist.com.springWeb" />
+	<context:component-scan
+		base-package="sist.com.aop" />
+	<context:component-scan
+		base-package="sist.com.vo" /> <!-- for intercept -->
+	<context:component-scan
+		base-package="sist.com.validate"/><!-- for validate -->
+
+</beans:beans>

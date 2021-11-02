@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+
+	<!-- scope = default is "singletone" -->
+	<!-- setter로 Dependency Injection -->
+	<bean id="person1" class="sist.com.di.basic1.Person"
+		scope="singleton" init-method="initPerson"
+		destroy-method="destoryPerson">
+		<property name="name" value="김태라"></property>
+		<property name="age" value="29"></property>
+		<property name="address" value="서울시 분당구 백현동"></property>
+	</bean>
+
+	<!-- setter로 Dependency Injection -->
+	<bean id="person2" class="sist.com.di.basic1.Person"
+		scope="prototype" p:name="송민제" p:age="28" p:address="서울시 송파구 잠실동"
+		init-method="initPerson"></bean>
+
+	<!-- 생성자로 Dependency Injection scope는 기본값인 "singletone"인가? -->
+	<bean id="person3" class="sist.com.di.basic1.Person"
+		init-method="initPerson">
+		<constructor-arg name="name" value="도경진"></constructor-arg>
+		<constructor-arg name="age" value="29"></constructor-arg>
+		<constructor-arg name="address" value="서울시 서초구 잠원동"></constructor-arg>
+	</bean>
+
+</beans>
+
+<!-- Advise. <1. destoryPerson> Attribute : destroy-method The name of the 
+	custom destroy method to invoke on bean factory shutdown. The method must 
+	have no arguments, but may throw any exception. This is an alternative to 
+	implementing Spring's DisposableBean interface or the standard Java Closeable/AutoCloseable 
+	interface, or marking a method with the PreDestroy annotation. Note: Only 
+	invoked on beans whose lifecycle is under the full control of the factory 
+	- which is always the case for singletons, but not guaranteed for any other 
+	scope. Data Type : string - 해석 - 특성: 파괴 방법 빈 공장 종료 시 호출할 사용자 지정 파괴 메서드의 이름입니다. 
+	메서드에 인수가 없어야 하지만 예외가 발생할 수 있습니다. 이는 스프링의 일회용 빈 인터페이스 또는 표준 Java 닫기/자동 닫기 
+	인터페이스를 구현하거나 프리데스트로이 주석을 사용하여 메소드를 표시하는 대신 사용할 수 있습니다. 참고: 공장에서 라이프사이클이 완전히 
+	통제되는 원두에만 작동되며, 이는 항상 싱글톤의 경우이지만 다른 범위에 대해서는 보장되지 않습니다. 데이터 유형 : 문자열 <2. 
+	initPerson> Attribute : init-method The name of the custom initialization 
+	method to invoke after setting bean properties. The method must have no arguments, 
+	but may throw any exception. This is an alternative to implementing Spring's 
+	InitializingBean interface or marking a method with the PostConstruct annotation. 
+	Data Type : string -해석- 특성: init-method 빈 속성을 설정한 후 호출할 사용자 지정 초기화 메서드의 이름입니다. 
+	메서드에 인수가 없어야 하지만 예외가 발생할 수 있습니다. 이것은 스프링의 InitializingBean 인터페이스를 구현하거나 PostConstruct 
+	주석으로 메소드를 표시하는 대안입니다. 데이터 유형 : 문자열 -->

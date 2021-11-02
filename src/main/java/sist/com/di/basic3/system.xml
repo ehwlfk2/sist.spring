@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+
+	<!-- 뭔데 이거 -->
+	<context:annotation-config/>
+	
+	<!-- 범위에 있는 @component가 달린 Class를 모두 스캔해온다.
+	범위안에 혹시나 Class 이름이 중복되는 경우, 반드시 Error 발생. -->
+	<context:component-scan base-package="sist.com.di.*"></context:component-scan>
+	
+</beans>
+
+<!-- 
+Bean :
+memory 할당된 reference 된 "이름"
+
+@ is annotation :
+주석인데 주석으로 중복 코드를 처리해버리는 FrameWork.
+
+ -->

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org./dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sist.com.vo.apple">
+
+	<!-- jdbc타입 지정 속성. jdbcType = ? VARCHER NUMBER (x), NUMERIC (o) -->
+
+	<!-- insert -->
+	<insert id="insertBoard" parameterType="board">
+		insert into boardmvc(
+		no,
+		author,
+		title,
+		password,
+		contents,
+		hit,
+		ref,
+		pnum,
+		regdate,
+		filename,
+		id,
+		job,
+		step,
+		lev,
+		reply
+		) values(#{no}, #{author}, #{title}, #{password}, #{contents}, 0,
+		#{ref}, #{pnum}, sysdate,
+		#{fileName, jdbcType=VARCHAR}, #{id}, #{job}, #{step}, #{lev}, #{reply})
+		<!-- Auto Commit -->
+	</insert>
+	<!-- insert - member -->
+	<insert id="insertBoardMember" parameterType="member">
+		insert into
+		BoardMember(no, id, password, name)
+		values(#{no}. #{id}, #{password},
+		#{name})
+	</insert>
+
+	<!-- update -->
+	<update id="updateHit" parameterType="int">
+		update boardMvc set
+		hit=hit+1 where no = #{no}
+	</update>
+	<update id="updateStep" parameterType="java.util.Map">
+		update boardMvc set
+		step=step+1 where ref = #{ref, jdbcType=NUMERIC} and step >= #{step,
+		jdbcType=NUMERIC}
+	</update>
+	<update id="updateReply" parameterType="int">
+		update boardMvc set
+		reply=reply+1 where no = #{no}
+	</update>
+
+
+	<!-- select -->
+	<select id="selectBoard" resultType="board">
+		select author, no, title, password, contents, fileName, ref,
+		hit, to_char(regdate, 'YYYY/MM/DD HH24:MI:SS')as Regdate, lev from
+		boardMvc
+		order by ref desc, step, regdate desc
+		<!-- Auto Commit -->
+	</select>
+
+	<select id="selectInfoAllBoard" parameterType="int"
+		resultType="board">
+		select * from BoardMvc where no = #{no}
+	</select>
+
+	<select id="getSequence" resultType="java.lang.Integer">
+		select boardMvc_seq.nextVal
+		from dual
+	</select>
+	<!-- select - member -->
+	<select id="loginBoard" parameterType="String"
+		resultType="String">
+		select password from boardMember where id = #{id}
+	</select>
+	<select id="getMemberId" parameterType="int" resultType="String">
+		select
+		id from boardMember where id = #{no}
+	</select>
+	<!-- select - board -->
+	<select id="getPasswordOfBoard" parameterType="int"
+		resultType="String">
+		select password from boardMvc where no = #{no}
+	</select>
+
+	<!-- delete - board -->
+	<delete id="deleteBoardOfNo" parameterType="int">
+		delete boardMember
+		where no = #{no}
+	</delete>
+
+	<!-- ...making advance... -->
+	<sql id="sql">
+		select no, author, title, password, contents, hit, 
+		to_char(regdate,'YYYY/MM/DD') regdate, filename, id, ref, step, lev, reply 
+		from boardmvc
+	</sql>
+
+	<select id="selectInfoBoard" parameterType="int" resultType="board">
+		<include refid="sql"></include>
+		where no=#{no}
+	</select>
+
+	<select id="selectMyPage" parameterType="java.util.HashMap"
+		resultType="board">
+		<include refid="sql"></include>
+		where no in
+		<!-- collection is keyValue -->
+		<foreach collection="nos" index="i" item="item" open="("
+			close=")" separator=",">
+			#{item}
+		</foreach>
+
+	</select>
+
+</mapper>
