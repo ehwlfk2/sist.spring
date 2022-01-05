@@ -15,7 +15,7 @@
 	console.log(two);
 	
 	// Array의 요소가 Array에 담긴 형태.
-	let spreadObj = [51,...one, 52, ...two];
+	let spreadObj = [51, ...one, 52, ...two];
 	console.log(spreadObj);
 	
 	// String 문자열의 연결.
@@ -32,12 +32,23 @@
 	console.log("2: ", `라인1\n라인2`);
 	console.log("3: ", `첫 번째 줄
 			두번째 줄`);
-	let a = 1, b = 2;
-	console.log("4: ", `1+2 = ${(a+b)}이다`);
+	var a = "1";
+	var b = "2";
+	const person = "human"
+	console.log("4: ", `1+2 = ${a + b}이다`);
+	console.log("5: ", `1+2 = ${1+2}이다`);
+	console.log(`${ person } 이다`);
 	
-	let value = "AjaxStreamDataValue";
-	let cnt = 50;
-	console.log('Data=${value} cnt=${cnt}');
+	console.log('Data=${value}, cnt=${cnt}');
+	
+	console.log('----------');	
+	var name = `사과`;
+	var price = 100;
+	var num = 5;
+	console.log(`${name}의 구매가는 ${price * num}원 입니다.`);
+
+	
+	console.log(jsversion);
 </script>
 
 </head>

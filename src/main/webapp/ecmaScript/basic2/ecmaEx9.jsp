@@ -23,7 +23,7 @@
 	console.log(Area, Area.version, Area.triangle(10,10), Area.diamond(10, 10));
 	
 	var a = Area();
-	console.log(a.diamond(10,10)); //접근 불가. 위의 메소드는 정적인 메소드이다.
+	//console.log(a.diamond(10,10)); //접근 불가. 위의 메소드는 정적인 메소드이다.
 	
 </script>
 </head>
@@ -31,7 +31,7 @@
 
 	<h3>ecmaEx9</h3>
 	<a type="button" href="ecmaEx8.jsp">ecmaEx8</a>
-	<a type="button" href="ecmaEx10.jsp">ecmaEx10</a>
+	<a type="button" href="ecmaEx10.jsp?value=AjaxStreamDataValue&cnt=50">ecmaEx10</a>
 
 
 
